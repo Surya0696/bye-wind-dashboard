@@ -4,16 +4,13 @@ import {
   TrendingUp as TrendingUpIcon,
   TrendingDown as TrendingDownIcon,
 } from "@mui/icons-material";
-import { useTheme } from "../../contexts/ThemeContext";
 
 const MetricCard = ({ title, value, change, trend, color, backgroundColor }) => {
-  const { isDarkMode } = useTheme();
-  
   return (
     <Card
       sx={{
         borderRadius: 2,
-        backgroundColor: isDarkMode ? "#1e1e1e" : (backgroundColor || "#F9FAFB"),
+        backgroundColor: backgroundColor || "#F9FAFB",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         p: 2.5,
         minHeight: 120,
@@ -28,7 +25,7 @@ const MetricCard = ({ title, value, change, trend, color, backgroundColor }) => 
           variant="body2"
           sx={{ 
             fontWeight: 500, 
-            color: isDarkMode ? "#b0b0b0" : "#666", 
+            color: "#666", 
             mb: 1.5,
             fontSize: '14px',
             textTransform: 'uppercase',
@@ -43,7 +40,7 @@ const MetricCard = ({ title, value, change, trend, color, backgroundColor }) => 
           variant="h4"
           sx={{ 
             fontWeight: 700, 
-            color: isDarkMode ? "#ffffff" : "#1C1C1C", 
+            color: "#1C1C1C", 
             mb: 1.5,
             fontSize: '28px',
             lineHeight: 1.2

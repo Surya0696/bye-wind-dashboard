@@ -16,7 +16,7 @@ export const ThemeProvider = ({ children }) => {
     if (saved !== null) {
       return JSON.parse(saved);
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false;
   });
 
   const toggleTheme = () => {
